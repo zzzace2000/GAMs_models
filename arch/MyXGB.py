@@ -98,26 +98,6 @@ class MyXGBClassifierBase(MyGAMPlotMixinBase, MyXGBMixin, XGBClassifier):
             data.columns = self.clean_feat_names
         return super().predict_proba(data, ntree_limit=ntree_limit, validate_features=False)
 
-    # def get_params(self, deep=True):
-    #     ''' 
-    #     A hack to make it work through the XGB code. They use the base class 0 to retrieve the parameters.
-    #     Since I overwrite the base_class[0] as OnehotEncodingClassifierMixin, now I do a hack to temporarily
-    #     assign the base class as the next one (XGB class).
-    #     '''
-    #     import copy
-    #     from xgboost import XGBModel
-
-    #     prev_obj = super()
-
-    #     orig_bases = copy.deepcopy(self.__class__.__bases__)
-    #     import pdb; pdb.set_trace()
-    #     self.__class__.__bases__ = (orig_bases[2], orig_bases[0], orig_bases[1])
-
-    #     params = prev_obj.get_params(deep=deep)
-    #     self.__class__.__bases__ = orig_bases
-
-    #     return params
-
 
 class MyXGBRegressorBase(MyGAMPlotMixinBase, MyXGBMixin, XGBRegressor):
     @property
