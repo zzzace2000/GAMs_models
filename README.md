@@ -11,7 +11,7 @@ To fully reproduce the paper's result, please see the repo https://github.com/zz
 
 ## Install
 
-We use the following python packages:
+We use Python 3.6 and the following packages:
 ```
  pip install pandas scikit-learn numpy seaborn xgboost interpret rpy2 pygam
 ```
