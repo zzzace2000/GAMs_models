@@ -1,11 +1,12 @@
 # Generalized additive models used in the paper "How Interpretable and Trustworthy are GAMs?"
 
 This repo is a simplified version designed to use the GAM models with your own datasets.
-In this repo, we provide the following GAMs implementation in python:
+In this repo, we provide the following GAMs implementation in Python:
 1. XGB (xgboost with depth 1 and visualized as a GAM)
-2. Spline (both pygam package and R mgcv package)
-3. Fused Lasso Additive Model (FLAM)
-4. Logistic Regression
+2. EBM (Explainable boosting machine https://github.com/interpretml/interpret)
+3. Spline (both pygam package and R mgcv package)
+4. Fused Lasso Additive Model (FLAM)
+5. Logistic Regression
 
 To fully reproduce the paper's result, please see the repo https://github.com/zzzace2000/GAMs
 
